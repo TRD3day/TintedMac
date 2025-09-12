@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B414A10D22F1E19800D02192 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B414A10C22F1E19800D02192 /* Cocoa.framework */; };
+		B414A11022F1E36C00D02192 /* CGVector+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49962D62117404300B110BD /* CGVector+Math.swift */; };
+		B414A11122F1E36C00D02192 /* CGPoint+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49962D82117405400B110BD /* CGPoint+Math.swift */; };
+		B414A11222F1E36C00D02192 /* TimeInterval+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49962DA2117407600B110BD /* TimeInterval+Additions.swift */; };
+		B414A11322F1E36C00D02192 /* WindowAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = B4D504941F292493001B8C1D /* WindowAdditions.h */; };
+		B414A11422F1E36C00D02192 /* WindowAdditions.mm in Sources */ = {isa = PBXBuildFile; fileRef = B4D504951F292493001B8C1D /* WindowAdditions.mm */; };
+		B414A11622F1E36C00D02192 /* TintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4502AA52116FB8900C6D503 /* TintManager.swift */; };
+		B414A11B22F1E38D00D02192 /* TintedMacInject.m in Sources */ = {isa = PBXBuildFile; fileRef = B414A11A22F1E38D00D02192 /* TintedMacInject.m */; };
+		B419A4181F2B2C3A00FECC47 /* WindowAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = B4D504941F292493001B8C1D /* WindowAdditions.h */; };
+		B419A4191F2B2C3A00FECC47 /* WindowAdditions.mm in Sources */ = {isa = PBXBuildFile; fileRef = B4D504951F292493001B8C1D /* WindowAdditions.mm */; };
+		B4502AA62116FB8900C6D503 /* TintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4502AA52116FB8900C6D503 /* TintManager.swift */; };
+		B47DE14E1F23FB4300DE9C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47DE14D1F23FB4300DE9C65 /* AppDelegate.swift */; };
+		B47DE1561F23FB4300DE9C65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47DE1551F23FB4300DE9C65 /* ViewController.swift */; };
+		B47DE15B1F23FB4300DE9C65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47DE1591F23FB4300DE9C65 /* Main.storyboard */; };
+		B47DE1671F23FB4300DE9C65 /* TintedMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47DE1661F23FB4300DE9C65 /* TintedMacTests.swift */; };
+		B49962D72117404300B110BD /* CGVector+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49962D62117404300B110BD /* CGVector+Math.swift */; };
+		B49962D92117405400B110BD /* CGPoint+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49962D82117405400B110BD /* CGPoint+Math.swift */; };
+		B49962DB2117407600B110BD /* TimeInterval+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49962DA2117407600B110BD /* TimeInterval+Additions.swift */; };
+		B4THEME01 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4THEME02 /* ThemeManager.swift */; };
+		B4APPEAR01 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4APPEAR02 /* AppearanceManager.swift */; };
+		B4CONFIG01 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CONFIG02 /* Config.swift */; };
+		B4BROWSER01 /* ThemeBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BROWSER02 /* ThemeBrowserView.swift */; };
+		B4SETTINGS01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4SETTINGS02 /* SettingsView.swift */; };
+		B4COLOREDITOR01 /* ColorEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4COLOREDITOR02 /* ColorEditorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B47DE1631F23FB4300DE9C65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47DE1421F23FB4300DE9C65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B47DE1491F23FB4300DE9C65;
+			remoteInfo = TintedMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B414A10522F1E16A00D02192 /* TintedMacInject.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TintedMacInject.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B414A10722F1E16A00D02192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B414A10C22F1E19800D02192 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B414A10E22F1E2BF00D02192 /* TintedMacInject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "TintedMacInject-Info.plist"; path = "TintedMacInject/Info.plist"; sourceTree = SOURCE_ROOT; };
+		B414A11922F1E38D00D02192 /* TintedMacInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TintedMacInject.h; path = TintedMacInject/TintedMacInject.h; sourceTree = SOURCE_ROOT; };
+		B414A11A22F1E38D00D02192 /* TintedMacInject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TintedMacInject.m; path = TintedMacInject/TintedMacInject.m; sourceTree = SOURCE_ROOT; };
+		B414A11C22F1E40A00D02192 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B435E79F22F1C78900FF5C55 /* TintedMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TintedMac.entitlements; sourceTree = "<group>"; };
+		B4502AA52116FB8900C6D503 /* TintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintManager.swift; sourceTree = "<group>"; };
+		B47DE14A1F23FB4300DE9C65 /* TintedMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TintedMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B47DE14D1F23FB4300DE9C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B47DE1551F23FB4300DE9C65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B47DE15A1F23FB4300DE9C65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B47DE15C1F23FB4300DE9C65 /* TintedMac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TintedMac-Info.plist"; sourceTree = "<group>"; };
+		B47DE1621F23FB4300DE9C65 /* TintedMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TintedMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B47DE1661F23FB4300DE9C65 /* TintedMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintedMacTests.swift; sourceTree = "<group>"; };
+		B47DE1681F23FB4300DE9C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49962D62117404300B110BD /* CGVector+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Math.swift"; sourceTree = "<group>"; };
+		B49962D82117405400B110BD /* CGPoint+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Math.swift"; sourceTree = "<group>"; };
+		B49962DA2117407600B110BD /* TimeInterval+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Additions.swift"; sourceTree = "<group>"; };
+		B4D504941F292493001B8C1D /* WindowAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindowAdditions.h; sourceTree = "<group>"; };
+		B4D504951F292493001B8C1D /* WindowAdditions.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WindowAdditions.mm; sourceTree = "<group>"; };
+		B4EFF92B1F27C941003648C9 /* TintedMac-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TintedMac-Bridging-Header.h"; sourceTree = "<group>"; };
+		B4THEME02 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		B4APPEAR02 /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
+		B4CONFIG02 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B4BROWSER02 /* ThemeBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBrowserView.swift; sourceTree = "<group>"; };
+		B4SETTINGS02 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B4COLOREDITOR02 /* ColorEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEditorView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B414A10222F1E16A00D02192 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B414A10D22F1E19800D02192 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47DE1471F23FB4300DE9C65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47DE15F1F23FB4300DE9C65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B40D616E22F1C62000E17A65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4EFF92B1F27C941003648C9 /* TintedMac-Bridging-Header.h */,
+				B47DE15C1F23FB4300DE9C65 /* TintedMac-Info.plist */,
+				B414A10E22F1E2BF00D02192 /* TintedMacInject-Info.plist */,
+				B435E79F22F1C78900FF5C55 /* TintedMac.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B40D616F22F1C65100E17A65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B47DE1591F23FB4300DE9C65 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B414A10622F1E16A00D02192 /* TintedMacInject */ = {
+			isa = PBXGroup;
+			children = (
+				B414A10722F1E16A00D02192 /* Info.plist */,
+			);
+			path = TintedMacInject;
+			sourceTree = "<group>";
+		};
+		B414A10B22F1E19800D02192 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B414A11C22F1E40A00D02192 /* CoreGraphics.framework */,
+				B414A10C22F1E19800D02192 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B47DE1411F23FB4300DE9C65 = {
+			isa = PBXGroup;
+			children = (
+				B47DE14C1F23FB4300DE9C65 /* TintedMac */,
+				B47DE1651F23FB4300DE9C65 /* TintedMacTests */,
+				B414A10622F1E16A00D02192 /* TintedMacInject */,
+				B47DE14B1F23FB4300DE9C65 /* Products */,
+				B414A10B22F1E19800D02192 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B47DE14B1F23FB4300DE9C65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B47DE14A1F23FB4300DE9C65 /* TintedMac.app */,
+				B47DE1621F23FB4300DE9C65 /* TintedMacTests.xctest */,
+				B414A10522F1E16A00D02192 /* TintedMacInject.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B47DE14C1F23FB4300DE9C65 /* TintedMac */ = {
+			isa = PBXGroup;
+			children = (
+				B49962D52117402700B110BD /* Extensions */,
+				B47DE14D1F23FB4300DE9C65 /* AppDelegate.swift */,
+				B47DE1551F23FB4300DE9C65 /* ViewController.swift */,
+				B4THEME02 /* ThemeManager.swift */,
+				B4APPEAR02 /* AppearanceManager.swift */,
+				B4CONFIG02 /* Config.swift */,
+				B4BROWSER02 /* ThemeBrowserView.swift */,
+				B4SETTINGS02 /* SettingsView.swift */,
+				B4COLOREDITOR02 /* ColorEditorView.swift */,
+				B4D504941F292493001B8C1D /* WindowAdditions.h */,
+				B4D504951F292493001B8C1D /* WindowAdditions.mm */,
+				B4502AA52116FB8900C6D503 /* TintManager.swift */,
+				B414A11922F1E38D00D02192 /* TintedMacInject.h */,
+				B414A11A22F1E38D00D02192 /* TintedMacInject.m */,
+				B40D616F22F1C65100E17A65 /* Resources */,
+				B40D616E22F1C62000E17A65 /* Supporting Files */,
+			);
+			path = TintedMac;
+			sourceTree = "<group>";
+		};
+		B47DE1651F23FB4300DE9C65 /* TintedMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				B47DE1661F23FB4300DE9C65 /* TintedMacTests.swift */,
+				B47DE1681F23FB4300DE9C65 /* Info.plist */,
+			);
+			path = TintedMacTests;
+			sourceTree = "<group>";
+		};
+		B49962D52117402700B110BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B49962D62117404300B110BD /* CGVector+Math.swift */,
+				B49962D82117405400B110BD /* CGPoint+Math.swift */,
+				B49962DA2117407600B110BD /* TimeInterval+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B414A10422F1E16A00D02192 /* TintedMacInject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B414A10A22F1E16A00D02192 /* Build configuration list for PBXNativeTarget "TintedMacInject" */;
+			buildPhases = (
+				B414A10122F1E16A00D02192 /* Sources */,
+				B414A10222F1E16A00D02192 /* Frameworks */,
+				B414A10322F1E16A00D02192 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TintedMacInject;
+			productName = TintedMacInject;
+			productReference = B414A10522F1E16A00D02192 /* TintedMacInject.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B47DE1491F23FB4300DE9C65 /* TintedMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B47DE16B1F23FB4300DE9C65 /* Build configuration list for PBXNativeTarget "TintedMac" */;
+			buildPhases = (
+				B47DE1461F23FB4300DE9C65 /* Sources */,
+				B47DE1471F23FB4300DE9C65 /* Frameworks */,
+				B47DE1481F23FB4300DE9C65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TintedMac;
+			productName = TintedMac;
+			productReference = B47DE14A1F23FB4300DE9C65 /* TintedMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B47DE1611F23FB4300DE9C65 /* TintedMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B47DE16E1F23FB4300DE9C65 /* Build configuration list for PBXNativeTarget "TintedMacTests" */;
+			buildPhases = (
+				B47DE15E1F23FB4300DE9C65 /* Sources */,
+				B47DE15F1F23FB4300DE9C65 /* Frameworks */,
+				B47DE1601F23FB4300DE9C65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B47DE1641F23FB4300DE9C65 /* PBXTargetDependency */,
+			);
+			name = TintedMacTests;
+			productName = TintedMacTests;
+			productReference = B47DE1621F23FB4300DE9C65 /* TintedMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B47DE1421F23FB4300DE9C65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = collaris;
+				TargetAttributes = {
+					B414A10422F1E16A00D02192 = {
+						CreatedOnToolsVersion = 11.0;
+						ProvisioningStyle = Automatic;
+					};
+					B47DE1491F23FB4300DE9C65 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1100;
+					};
+					B47DE1611F23FB4300DE9C65 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1100;
+						TestTargetID = B47DE1491F23FB4300DE9C65;
+					};
+				};
+			};
+			buildConfigurationList = B47DE1451F23FB4300DE9C65 /* Build configuration list for PBXProject "TintedMac" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B47DE1411F23FB4300DE9C65;
+
+			productRefGroup = B47DE14B1F23FB4300DE9C65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B47DE1491F23FB4300DE9C65 /* TintedMac */,
+				B47DE1611F23FB4300DE9C65 /* TintedMacTests */,
+				B414A10422F1E16A00D02192 /* TintedMacInject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B414A10322F1E16A00D02192 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47DE1481F23FB4300DE9C65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B47DE15B1F23FB4300DE9C65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47DE1601F23FB4300DE9C65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B414A10122F1E16A00D02192 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B414A11022F1E36C00D02192 /* CGVector+Math.swift in Sources */,
+				B414A11122F1E36C00D02192 /* CGPoint+Math.swift in Sources */,
+				B414A11222F1E36C00D02192 /* TimeInterval+Additions.swift in Sources */,
+				B414A11322F1E36C00D02192 /* WindowAdditions.h in Sources */,
+				B414A11422F1E36C00D02192 /* WindowAdditions.mm in Sources */,
+				B414A11622F1E36C00D02192 /* TintManager.swift in Sources */,
+				B414A11B22F1E38D00D02192 /* TintedMacInject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47DE1461F23FB4300DE9C65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B47DE1561F23FB4300DE9C65 /* ViewController.swift in Sources */,
+				B49962D92117405400B110BD /* CGPoint+Math.swift in Sources */,
+				B47DE14E1F23FB4300DE9C65 /* AppDelegate.swift in Sources */,
+				B4502AA62116FB8900C6D503 /* TintManager.swift in Sources */,
+				B4THEME01 /* ThemeManager.swift in Sources */,
+				B4APPEAR01 /* AppearanceManager.swift in Sources */,
+				B4CONFIG01 /* Config.swift in Sources */,
+				B4BROWSER01 /* ThemeBrowserView.swift in Sources */,
+				B4SETTINGS01 /* SettingsView.swift in Sources */,
+				B4COLOREDITOR01 /* ColorEditorView.swift in Sources */,
+				B49962D72117404300B110BD /* CGVector+Math.swift in Sources */,
+				B419A4181F2B2C3A00FECC47 /* WindowAdditions.h in Sources */,
+				B419A4191F2B2C3A00FECC47 /* WindowAdditions.mm in Sources */,
+				B49962DB2117407600B110BD /* TimeInterval+Additions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47DE15E1F23FB4300DE9C65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B47DE1671F23FB4300DE9C65 /* TintedMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B47DE1641F23FB4300DE9C65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B47DE1491F23FB4300DE9C65 /* TintedMac */;
+			targetProxy = B47DE1631F23FB4300DE9C65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B47DE1591F23FB4300DE9C65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B47DE15A1F23FB4300DE9C65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B414A10822F1E16A00D02192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "TintedMacInject/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aspauldingcode.TintedMac.inject;
+				PRODUCT_MODULE_NAME = TintedMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TintedMac/Supporting Files/TintedMac-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B414A10922F1E16A00D02192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "TintedMacInject/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aspauldingcode.TintedMac.inject;
+				PRODUCT_MODULE_NAME = TintedMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TintedMac/Supporting Files/TintedMac-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		B47DE1691F23FB4300DE9C65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B47DE16A1F23FB4300DE9C65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		B47DE16C1F23FB4300DE9C65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "TintedMac/Supporting Files/TintedMac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P2BY58D85Z;
+				INFOPLIST_FILE = "TintedMac/Supporting Files/TintedMac-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aspauldingcode.TintedMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TintedMac/Supporting Files/TintedMac-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B47DE16D1F23FB4300DE9C65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "TintedMac/Supporting Files/TintedMac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P2BY58D85Z;
+				INFOPLIST_FILE = "TintedMac/Supporting Files/TintedMac-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aspauldingcode.TintedMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TintedMac/Supporting Files/TintedMac-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B47DE16F1F23FB4300DE9C65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P2BY58D85Z;
+				INFOPLIST_FILE = TintedMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aspauldingcode.TintedMac.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TintedMac.app/Contents/MacOS/TintedMac";
+			};
+			name = Debug;
+		};
+		B47DE1701F23FB4300DE9C65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P2BY58D85Z;
+				INFOPLIST_FILE = TintedMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aspauldingcode.TintedMac.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TintedMac.app/Contents/MacOS/TintedMac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B414A10A22F1E16A00D02192 /* Build configuration list for PBXNativeTarget "TintedMacInject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B414A10822F1E16A00D02192 /* Debug */,
+				B414A10922F1E16A00D02192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B47DE1451F23FB4300DE9C65 /* Build configuration list for PBXProject "TintedMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B47DE1691F23FB4300DE9C65 /* Debug */,
+				B47DE16A1F23FB4300DE9C65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B47DE16B1F23FB4300DE9C65 /* Build configuration list for PBXNativeTarget "TintedMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B47DE16C1F23FB4300DE9C65 /* Debug */,
+				B47DE16D1F23FB4300DE9C65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B47DE16E1F23FB4300DE9C65 /* Build configuration list for PBXNativeTarget "TintedMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B47DE16F1F23FB4300DE9C65 /* Debug */,
+				B47DE1701F23FB4300DE9C65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+
+	};
+	rootObject = B47DE1421F23FB4300DE9C65 /* Project object */;
+}
