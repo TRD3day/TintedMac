@@ -1,21 +1,6 @@
-name: Build TintedMac
-
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: List schemes and targets
-        run: xcodebuild -list -project TintedMac.xcodeproj
-
       - name: Build TintedMac
         run: |
+          set -o pipefail
           xcodebuild \
             -project TintedMac.xcodeproj \
             -scheme TintedMac \
@@ -26,15 +11,4 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            build
-
-      - name: Zip the .app
-        run: |
-          cd build/Build/Products/Release
-          ditto -c -k --keepParent TintedMac.app "$GITHUB_WORKSPACE/TintedMac.zip"
-
-      - name: Upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: TintedMac-macOS
-          path: TintedMac.zip
+            build 2>&1 | tee build.log || (echo "=== ERRORS ==="; grep -E "error:|warning: unable" build.log | head -30; exit 65)
