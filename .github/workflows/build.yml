@@ -14,20 +14,8 @@ jobs:
       - name: List schemes and targets
         run: xcodebuild -list -project TintedMac.xcodeproj
 
-      - name: Build TintedMac
-        run: |
-          set -o pipefail
-          xcodebuild \
-            -project TintedMac.xcodeproj \
-            -scheme TintedMac \
-            -configuration Release \
-            -sdk macosx \
-            -destination 'generic/platform=macOS' \
-            -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY="" \
-            build 2>&1 | tee build.log || (echo "=== ERRORS ==="; grep -E "error:|warning: unable" build.log | head -30; exit 65)
+      - name: Build with Makefile
+        run: make tintedmac
 
       - name: Zip the .app
         run: |
