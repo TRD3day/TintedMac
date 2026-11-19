@@ -11,19 +11,67 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: List schemes and targets
-        run: xcodebuild -list -project TintedMac.xcodeproj
-
-      - name: Build with Makefile
-        run: make tintedmac
-
-      - name: Zip the .app
+      - name: Show Xcode and project info
         run: |
-          cd build/Build/Products/Release
-          ditto -c -k --keepParent TintedMac.app "$GITHUB_WORKSPACE/TintedMac.zip"
+          xcodebuild -version
+          xcodebuild -list -project TintedMac.xcodeproj || true
 
-      - name: Upload
+      - name: Resolve Swift packages
+        run: xcodebuild -resolvePackageDependencies -project TintedMac.xcodeproj || true
+
+      - name: Build TintedMac
+        run: |
+          set -o pipefail
+          FLAGS="CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO"
+
+          echo "=== Attempt 1: scheme ==="
+          if xcodebuild \
+              -project TintedMac.xcodeproj \
+              -scheme TintedMac \
+              -configuration Release \
+              -sdk macosx \
+              -destination 'generic/platform=macOS' \
+              -derivedDataPath build \
+              $FLAGS CODE_SIGN_IDENTITY="" \
+              build 2>&1 | tee build.log; then
+            echo "Scheme build succeeded"
+          else
+            echo "=== Attempt 2: target (no shared scheme needed) ==="
+            if xcodebuild \
+                -project TintedMac.xcodeproj \
+                -target TintedMac \
+                -configuration Release \
+                -sdk macosx \
+                SYMROOT="$PWD/build" \
+                $FLAGS CODE_SIGN_IDENTITY="" \
+                build 2>&1 | tee build-target.log; then
+              echo "Target build succeeded"
+            else
+              echo "=== ERRORS (scheme attempt) ==="
+              grep -E "error:" build.log | head -30 || true
+              echo "=== ERRORS (target attempt) ==="
+              grep -E "error:" build-target.log | head -30 || true
+              exit 65
+            fi
+          fi
+
+      - name: Find and zip the .app
+        run: |
+          APP=$(find build -name "TintedMac.app" -type d | head -1)
+          echo "Found app at: $APP"
+          test -n "$APP"
+          ditto -c -k --keepParent "$APP" TintedMac.zip
+
+      - name: Upload app
         uses: actions/upload-artifact@v4
         with:
           name: TintedMac-macOS
           path: TintedMac.zip
+
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: build*.log
+          if-no-files-found: ignore
